@@ -41,35 +41,17 @@ export default function App(props) {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/programs" exact component={Program}>
-          <Program />
-        </Route>
-        <Route
-          path="/programs/:id/programcomments"
-          exact
-          component={ProgramComments}
-        >
-          <Route
-            path="/programs/:id/programcomments"
-            exact
-            component={ProgramComments}
-          />
+        
+        <Route path="/posts" exact component={PostsList}>
+          <Route path="/posts" exact component={PostsList} />
         </Route>
 
-        <Route path="/events" exact component={EventsList}>
-          <EventsList />
+        <Route path="/posts/:id/comments" exact component={PostAndComments}>
+          <Route path="/posts/:id/comments" exact component={PostAndComments} />
         </Route>
 
-        <Route
-          path="/events/:id/eventcomments"
-          exact
-          component={EventAndComments}
-        >
-          <Route
-            path="/events/:id/eventcomments"
-            exact
-            component={EventAndComments}
-          />
+        <Route path="/galleries" exact component={GalleryList}>
+          <Route path="/galleries" exact component={GalleryList} />
         </Route>
 
         <Route path="/posts" exact component={PostsList}>
