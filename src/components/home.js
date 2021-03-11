@@ -157,7 +157,7 @@ export default function Home(props) {
   }, []);
   useEffect(() => {
     axios
-      .get("http://localhost:9000/events/lives")
+      .get("https://cryptic-shelf-72177.herokuapp.com/events/lives")
       .then((response) => {
         setLiveEvent([...response.data]);
         console.log(response.data);
