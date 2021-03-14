@@ -49,7 +49,7 @@ const NavBar = () => {
     </Link>
     </ReactBootStrap.Nav>
   </ReactBootStrap.Navbar.Collapse>
-</ReactBootStrap.Navbar>
+  </ReactBootStrap.Navbar>
         </div>
     )
 }
