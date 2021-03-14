@@ -1,37 +1,57 @@
-import React from "react";
+import React from 'react';
+import * as ReactBootStrap from "react-bootstrap";
+import {
+    BrowserRouter as Router,
+    Link
+  } from "react-router-dom";
 
-export default function Header() {
-  
-  return (
-    <div>
-      <header className="header">
-        <a href className="logo">
-          <img
-            src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.jpg"
-            className="logoimage"
-          />
-        </a>
-        <input className="menu-btn" type="checkbox" id="menu-btn" />
-        <label className="menu-icon" htmlFor="menu-btn">
-          <span className="navicon" />
-        </label>
-        <ul className="menu">
-          <li className="contactme">
-            <a href="/events">Events</a>
-          </li>
-          <li className="aboutme">
-            <a href="/programs">Programs</a>
-          </li>
-          <li className="projects">
-            <a href="/posts">Posts</a>
-          </li>
-          <li className="Home">
-            <a href="/" className="Home">
-              Home
-            </a>
-          </li>
-        </ul>
-      </header>
-    </div>
-  );
+const NavBar = () => {
+    return(
+        <div className="App">
+    <ReactBootStrap.Navbar collapseOnSelect expand="lg" bg="danger"  style={{
+   border:" 1px solid white",
+   borderRadius:" 0px",
+   boxShadow: "#888 10px 40px"}}variant="dark">
+    <ReactBootStrap.Navbar.Brand href="#home">
+      <img
+        src="/logo-hosting.png" alt=""
+        width="170"
+        height="40"
+        className="d-inline-block align-top"
+        alt="React Bootstrap logo"
+      />
+    </ReactBootStrap.Navbar.Brand>
+  <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
+    <ReactBootStrap.Nav className="mr-auto">
+    <Link to="/features">
+    <ReactBootStrap.Nav.Link style={{color: "white", fontSize: "18px", fontWeight: "bolder"}} href="#features">Home</ReactBootStrap.Nav.Link>
+
+    </Link>
+    <Link to="/pricing">
+    <ReactBootStrap.Nav.Link style={{color: "white", fontSize: "18px", fontWeight: "bolder"}}  href="#pricing">Programs Activities</ReactBootStrap.Nav.Link>
+    </Link>
+    <ReactBootStrap.Nav.Link style={{color: "white", fontSize: "18px", fontWeight: "bolder"}}  href="#features">Events</ReactBootStrap.Nav.Link>
+    <ReactBootStrap.Nav.Link style={{color: "white", fontSize: "18px", fontWeight: "bolder"}}  href="#features">Blogs</ReactBootStrap.Nav.Link>
+    <ReactBootStrap.Nav.Link style={{color: "white", fontSize: "18px", fontWeight: "bolder"}}  href="#features">Gallleries</ReactBootStrap.Nav.Link>
+    <ReactBootStrap.Nav.Link style={{color: "white", fontSize: "18px", fontWeight: "bolder"}}  href="#features">Contacts</ReactBootStrap.Nav.Link>
+
+    </ReactBootStrap.Nav>
+    <ReactBootStrap.Nav>
+    <Link to="/deets">
+    <ReactBootStrap.Nav.Link style={{color: "white", fontSize: "18px", fontWeight: "bolder"}}  href="#deets">Contacts</ReactBootStrap.Nav.Link>
+
+    </Link>
+    <Link to="/dankmemes">
+    <ReactBootStrap.Nav.Link style={{color: "white", fontSize: "18px", fontWeight: "bolder"}}  eventKey={2} href="#memes">
+        Info Contacts
+      </ReactBootStrap.Nav.Link>
+    </Link>
+    </ReactBootStrap.Nav>
+  </ReactBootStrap.Navbar.Collapse>
+</ReactBootStrap.Navbar>
+        </div>
+    )
 }
+
+export default NavBar;
