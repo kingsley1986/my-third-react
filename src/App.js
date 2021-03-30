@@ -16,6 +16,13 @@ import image1 from "./images/one.jpg";
 import "react-animated-slider/build/horizontal.css";
 import "normalize.css/normalize.css";
 import "./components/homepage.css";
+import "./components/event-home.css";
+import "./components/home-programs.css";
+import "./components/programs.css";
+import "./components/events.css";
+import "./components/posts.css";
+import "./components/galleries.css";
+
 import ProductCard from "./components/product";
 import Slider2 from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -76,8 +83,8 @@ export default function App(props) {
           <Route path="/posts" exact component={PostsList} />
         </Route>
 
-        <Route path="/posts/:id/comments" exact component={PostAndComments}>
-          <Route path="/posts/:id/comments" exact component={PostAndComments} />
+        <Route path="/posts/:id/comments/api" exact component={PostAndComments}>
+          <Route path="/posts/:id/comments/api" exact component={PostAndComments} />
         </Route>
 
         <Route path="/galleries" exact component={GalleryList}>

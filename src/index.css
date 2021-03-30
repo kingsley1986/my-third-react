@@ -5,6 +5,7 @@ div.container.forprogramhome {
   padding-left: 0px;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 7px;
 }
 .container {
   width: 100%;
@@ -234,11 +235,6 @@ div.container.forprogramhome {
 }
 
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif:400,700");
-
-body {
-  background-color: #fafafa;
-  font-family: "Noto Serif", serif;
-}
 
 .comment-container {
   width: 80%;

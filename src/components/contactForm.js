@@ -16,7 +16,7 @@ export default function ContactForm(props) {
   const [token, setToken] = useState("");
   const reCaptcha = useRef();
 
-  const onPageLoad = () => {};
+  const onPageLoad = () => { };
   useEffect(() => {
     onPageLoad();
   }, []);
@@ -37,7 +37,7 @@ export default function ContactForm(props) {
       setRequest("");
 
       axios
-        .post("http://localhost:9000/contact_form", {
+        .post("https://cryptic-shelf-72177.herokuapp.com/contact_form", {
           name: name,
           email: email,
           request: request,

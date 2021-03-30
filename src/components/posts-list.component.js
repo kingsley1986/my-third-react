@@ -18,69 +18,74 @@ import {
 
 export default function Post() {
   const BlogPost = (props) => (
-    <MDBCol lg="4" md="12" className="mb-lg-0 mb-4">
-      <MDBView hover className="rounded z-depth-2 mb-4" waves style={{}}>
-        <img
-          className="img-fluid"
-          style={{
-            width: "400px",
-            height: "230px",
-            objectPosition: "center center",
-            objectFit: "cover",
-          }}
-          src={props.post.postImage}
-          alt=""
-        />
-        <MDBMask overlay="white-slight" />
-      </MDBView>
-
-      <h5 className="font-weight-bold mb-3">
-        <MDBIcon icon="map" className="pr-2" />
-        <strong>{props.post.title}</strong>
-      </h5>
-
-      <h6 className="font-weight-bold mb-3">
-        By{" "}
-        <strong>
-          <a href="#!" className="pink-text">
-            {props.post.from}
-          </a>
-        </strong>
-      </h6>
-
-      <p>
-        <a href="#!" className="font-weight-bold"></a>{" "}
-        {moment(props.post.createdAt).format("llll")}
-      </p>
-      <p
-        className="dark-grey-text"
-        style={{ textAlign: "justify", textJustify: "inter-word" }}
-      >
-        {props.post.description.substring(0, 200)}
-      </p>
-      <MDBBtn color="pink" rounded size="md">
-        <button type="button" class="btn btn-success">
-          <Link
-            style={{ color: "white" }}
-            to={{
-              pathname: `posts/${props.post._id}/comments`,
-              query: { id: props.post.id },
+    <MDBCol lg="4" md="12" className="mb-lg-0 mb-4"  >
+      <div style={{
+        backgroundColor: "white", boxShadow: '0 0 10px 0.5px grey',
+        display: "block"
+      }}>
+        <MDBView hover className="rounded z-depth-2 mb-4" waves >
+          <img
+            className="img-fluid"
+            style={{
+              width: "500px",
+              height: "270px",
+              objectPosition: "center center",
+              objectFit: "cover",
             }}
-          >
-            Ream more....
+            src={props.post.postImage}
+            alt=""
+          />
+          <MDBMask overlay="white-slight" />
+        </MDBView>
+
+        <h5 className="font-weight-bold mb-3">
+          <MDBIcon icon="map" className="pr-2" />
+          <strong>{props.post.title}</strong>
+        </h5>
+
+        <h6 className="font-weight-bold mb-3">
+          By{" "}
+          <strong>
+            <a href="#!" className="pink-text">
+              {props.post.from}
+            </a>
+          </strong>
+        </h6>
+
+        <p>
+          <a href="#!" className="font-weight-bold"></a>{" "}
+          {moment(props.post.createdAt).format("llll")}
+        </p>
+        <p
+          className="dark-grey-text"
+          style={{ textAlign: "justify", textJustify: "inter-word" }}
+        >
+          {props.post.description.substring(0, 225)}
+        </p>
+        <MDBBtn color="pink" rounded size="md">
+          <button type="button" class="btn btn-success">
+            <Link
+              style={{ color: "white" }}
+              to={{
+                pathname: `posts/${props.post._id}/comments/api`,
+                query: { id: props.post.id },
+              }}
+            >
+              Read more....
           </Link>
-        </button>
-        <br></br>
-        <br></br>
-      </MDBBtn>
-    </MDBCol>
+          </button>
+          <br></br>
+          <br></br>
+        </MDBBtn>
+      </div>
+    </MDBCol >
   );
 
   const [postData, setPostData] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:9000/posts")
+      .get("https://cryptic-shelf-72177.herokuapp.com/posts/api")
       .then((response) => {
         setPostData([...response.data]);
       })
@@ -94,18 +99,18 @@ export default function Post() {
   ));
 
   return (
-    <MDBCard className="my-5 pb-5">
+    <MDBCard className="my-5 pb-5" >
       <MDBCardBody className="text-center">
         <h2 className="h1-responsive font-weight-bold text-center my-5">
           Recent posts
         </h2>
-        <p className="text-center w-responsive mx-auto mb-5">
+        <p className="text-center w-responsive mx-auto mb-5" >
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
           dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
           proident, sunt in culpa qui officia deserunt mollit anim id est
           laborum.
         </p>
-        <MDBRow>{blogPostList}</MDBRow>
+        <MDBRow >{blogPostList}</MDBRow>
       </MDBCardBody>
     </MDBCard>
   );

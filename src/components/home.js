@@ -310,10 +310,10 @@ export default function Home(props) {
         ))}
       </Slider>
       <div className="sliderclass" style={{ padding: 12 }}>
-        <h2 class="d-flex justify-content-center">
-          {" "}
-          These are the Upcoming Events. Are you coming?
-        </h2>
+        <div className="container">
+          <div className="eventlist">These are the Upcoming Events</div>
+
+        </div>
         <Slider2 {...settings}>
           {slides.map((slide, index) => {
             return (
@@ -353,7 +353,7 @@ export default function Home(props) {
                     </a>
                   </div> */}
                       <div className="card-body">
-                        <h4 className="card-title">{slide.title}</h4>
+                        <h4 className="card-title" style={{ fontSize: "26px" }}>{slide.title}</h4>
                         <div className="text-center">
                           {" "}
                           <button
@@ -390,7 +390,7 @@ export default function Home(props) {
 
                         <a
                           href={"/events/" + slide._id + "/eventcomments"}
-                          className="btn btn-info btn-lg btn-block"
+                          className="btn-grad"
                         >
                           Click here if you want to attend
                         </a>
@@ -418,7 +418,10 @@ export default function Home(props) {
       </div>
       <br></br>
       <br></br>
+      <div className="container">
+        <div className="programlist">These are list of our Programs and Activities</div>
 
+      </div>
       <div className={classes.root} style={{ padding: 12 }}>
         <GridList
           cols={matches ? 1 : 3}

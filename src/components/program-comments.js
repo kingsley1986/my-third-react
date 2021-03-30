@@ -56,7 +56,7 @@ export default function ProgramComments(props) {
                 className="v-avatar avatar"
                 style={{ height: "50px", width: "50px" }}
               >
-                <img src="https://images.unsplash.com/photo-1490894641324-cfac2f5cd077?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=100&q=70" />
+                <img src="https://img.icons8.com/clouds/2x/holy-bible.png" />
               </div>
               <span className="displayName title">{props.comment.name}</span>{" "}
               <span className="displayName caption">
@@ -122,7 +122,7 @@ export default function ProgramComments(props) {
 
     axios
       .delete(
-        "http://localhost:9000/programs/" + props.match.params.id + "/delete"
+        "https://cryptic-shelf-72177.herokuapp.com/programs/" + props.match.params.id + "/delete"
       )
 
       .then(function (response) {
@@ -139,9 +139,9 @@ export default function ProgramComments(props) {
   useEffect(() => {
     axios
       .get(
-        "http://localhost:9000/programs/" +
-          props.match.params.id +
-          "/programcommentsapi"
+        "https://cryptic-shelf-72177.herokuapp.com/programs/" +
+        props.match.params.id +
+        "/programcommentsapi"
       )
 
       .then((response) => {
@@ -155,9 +155,9 @@ export default function ProgramComments(props) {
   const onPageLoad = () => {
     axios
       .get(
-        "http://localhost:9000/programs/" +
-          props.match.params.id +
-          "/programcommentsapi"
+        "https://cryptic-shelf-72177.herokuapp.com/programs/" +
+        props.match.params.id +
+        "/programcommentsapi"
       )
 
       .then((response) => {
@@ -195,9 +195,9 @@ export default function ProgramComments(props) {
 
       axios
         .post(
-          "http://localhost:9000/programs/" +
-            props.match.params.id +
-            "/createcommentapi",
+          "https://cryptic-shelf-72177.herokuapp.com/programs/" +
+          props.match.params.id +
+          "/createcommentapi",
           { name: name, description: eventDescription, token }
         )
 
@@ -243,10 +243,12 @@ export default function ProgramComments(props) {
             <div className="card-body">
               <h4 className="card-title">{programs.title}</h4>
               <small className="text-muted cat">
-                <i className="far fa-clock text-info" /> 30 minutes
-                <i className="fas fa-users text-info" /> 4 portions
+                <i className="far fa-clock text-info" /> {moment(programs.createdAt).format("llll")}
+                <i className="fas fa-users text-info" />
               </small>
-              <p className="card-text">{programs.description}</p>
+              <p className="card-text" style={{
+
+              }}>{programs.description}</p>
               <a href="#" className="btn btn-outline-success">
                 {commentLengt}
               </a>
@@ -256,10 +258,10 @@ export default function ProgramComments(props) {
                 {" "}
                 {moment(programs.createdAt).format("llll")}
               </div>
-              <div className="stats">
+              {/* <div className="stats">
                 <i className="far fa-eye" /> 1347
                 <i className="far fa-comment" /> 12
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -306,14 +308,14 @@ export default function ProgramComments(props) {
                     type="submit"
                     id="myBtn"
                     class="btn btn-success"
-                    // onClick={handleSubscribe}
+                  // onClick={handleSubscribe}
                   >
                     Submit
                   </button>
                 </form>
 
                 <p id="warning" />
-
+                {/* 
                 <button
                   type="submit"
                   id="myBtn"
@@ -321,7 +323,7 @@ export default function ProgramComments(props) {
                   onClick={onDeleteEve}
                 >
                   Delete
-                </button>
+                </button> */}
               </div>
             </div>
             <div className="row">
@@ -342,6 +344,6 @@ export default function ProgramComments(props) {
 
         <div class="comments">{eventCommentList}</div>
       </div>
-    </div>
+    </div >
   );
 }

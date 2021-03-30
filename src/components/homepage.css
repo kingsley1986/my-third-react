@@ -6,6 +6,10 @@
 
 /* home image slider started here  */
 
+.navbar-dark .navbar-nav .nav-link {
+  /* color: #e8491d ;
+    font-size: 18px; font-weight: bolder;  border-left: 2px dotted lightgrey */
+}
 .slide h1 {
   transition: all 0.3s ease;
   -webkit-transform: translateY(-20px);
@@ -232,9 +236,17 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 
 body {
-  font-family: "Lato", sans-serif;
+  /* font-family: "Lato", sans-serif;
   box-sizing: border-box;
-  /* padding-top: 75px; */
+  background-color: #f5f5f5;
+  font-size: 1.1em; */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAL0lEQVQYV2NkIBIwEqHOGKjmLDEKwWbhUwg2CWYjRSaimESRiVhNIstEvCbBTAQAl5IFCylWpesAAAAASUVORK5CYII=)
+    repeat;
+}
+.makeStyles-root-1 {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAL0lEQVQYV2NkIBIwEqHOGKjmLDEKwWbhUwg2CWYjRSaimESRiVhNIstEvCbBTAQAl5IFCylWpesAAAAASUVORK5CYII=)
+    repeat;
 }
 
 header {
@@ -490,11 +502,11 @@ button:hover {
   }
 }
 
-body {
+/* body {
   margin: 0;
   font-family: Helvetica, sans-serif;
   background-color: #fffceb;
-}
+} */
 
 a {
   color: #000;
@@ -508,6 +520,7 @@ a {
   display: flex;
   height: 600px;
   padding-top: 68px;
+
   margin-top: -70px;
 }
 .slick-slider {
@@ -604,6 +617,8 @@ a {
 .card {
   margin-top: 20px;
   padding-top: 4px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAL0lEQVQYV2NkIBIwEqHOGKjmLDEKwWbhUwg2CWYjRSaimESRiVhNIstEvCbBTAQAl5IFCylWpesAAAAASUVORK5CYII=);
+
   /* padding-bottom: 4px; */
 }
 
@@ -670,6 +685,36 @@ a {
 /* .card-footer {
   font-size: 0.8rem;
 } */
+
+/* this is event slider link  */
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #ff0084 0%,
+    #33001b 51%,
+    #ff0084 100%
+  );
+}
+.btn-grad {
+  margin: 10px;
+  padding: 9px 5px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+/* events slider link ends here  */
 
 /* contact form started here  */
 
@@ -756,6 +801,29 @@ ul {
   margin: 0px;
   padding: 0px;
 }
+
+/* text for events starts here */
+
+.eventlist {
+  background-color: rgb(92, 2, 2);
+  color: white;
+  /* padding: 10px; */
+  text-align: center;
+  font-size: 3.6vmin;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+.programlist {
+  background-color: rgb(92, 2, 2);
+  color: white;
+  /* padding: 10px; */
+  text-align: center;
+  font-size: 3.6vmin;
+  font-style: italic;
+  font-weight: bolder;
+}
+/* and ends here  */
 .footer-section {
   background: #151414;
   position: relative;

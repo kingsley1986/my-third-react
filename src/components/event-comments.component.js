@@ -136,9 +136,9 @@ export default function EventAndComments(props) {
   useEffect(() => {
     axios
       .get(
-        "http://localhost:9000/events/" +
-          props.match.params.id +
-          "/eventcomments"
+        "https://cryptic-shelf-72177.herokuapp.com/events/" +
+        props.match.params.id +
+        "/eventcomments/api"
       )
 
       .then((response) => {
@@ -153,9 +153,9 @@ export default function EventAndComments(props) {
   const onPageLoad = () => {
     axios
       .get(
-        "http://localhost:9000/events/" +
-          props.match.params.id +
-          "/eventcomments"
+        "https://cryptic-shelf-72177.herokuapp.com/events/" +
+        props.match.params.id +
+        "/eventcomments/api"
       )
 
       .then((response) => {
@@ -231,9 +231,9 @@ export default function EventAndComments(props) {
 
       axios
         .post(
-          "http://localhost:9000/events/api/" +
-            props.match.params.id +
-            "/eventcomment",         
+          "https://cryptic-shelf-72177.herokuapp.com/events/" +
+          props.match.params.id +
+          "/eventcomment",
           { name: name, description: eventDescription, token }
         )
 
@@ -255,7 +255,7 @@ export default function EventAndComments(props) {
 
   const updateGoing = (going) => {
     axios
-      .get("http://localhost:9000/events/" + props.match.params.id + "/going")
+      .get("https://cryptic-shelf-72177.herokuapp.com/events/" + props.match.params.id + "/going")
       .then((response) => {
         setEventData(response.data);
       });
@@ -279,7 +279,7 @@ export default function EventAndComments(props) {
 
     axios
       .delete(
-        "http://localhost:9000/events/" + props.match.params.id + "/delete"
+        "https://cryptic-shelf-72177.herokuapp.com/events/" + props.match.params.id + "/delete"
       )
 
       .then(function (response) {

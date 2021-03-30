@@ -62,7 +62,7 @@ export default function PostAndComments(props) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:9000/posts/" + props.match.params.id + "/comments")
+      .get("https://cryptic-shelf-72177.herokuapp.com/posts/" + props.match.params.id + "/comments/api")
 
       .then((response) => {
         setPostData(response.data);
@@ -74,7 +74,7 @@ export default function PostAndComments(props) {
   }, []);
   const onPageLoad = () => {
     axios
-      .get("http://localhost:9000/posts/" + props.match.params.id + "/comments")
+      .get("https://cryptic-shelf-72177.herokuapp.com/posts/" + props.match.params.id + "/comments/api")
 
       .then((response) => {
         setCommentData(response.data.comments);
@@ -111,7 +111,7 @@ export default function PostAndComments(props) {
 
       axios
         .post(
-          "http://localhost:9000/posts/" + props.match.params.id + "/comment",
+          "https://cryptic-shelf-72177.herokuapp.com/posts/" + props.match.params.id + "/comment/api",
           { name: name, description: eventDescription, token }
         )
 
@@ -146,7 +146,7 @@ export default function PostAndComments(props) {
 
     axios
       .delete(
-        "http://localhost:9000/posts/" + props.match.params.id + "/delete"
+        "https://cryptic-shelf-72177.herokuapp.com/posts/" + props.match.params.id + "/delete"
       )
 
       .then(function (response) {
@@ -249,12 +249,12 @@ export default function PostAndComments(props) {
         </form>
       </MDBContainer>
       <button
-                  type="submit"
-                  id="myBtn"
-                  class="btn btn-success"
-                  onClick={onDeleteEve}
-                >
-                  Delete
+        type="submit"
+        id="myBtn"
+        class="btn btn-success"
+        onClick={onDeleteEve}
+      >
+        Delete
                 </button>
       <hr></hr>
       <MDBContainer>{commentList}</MDBContainer>

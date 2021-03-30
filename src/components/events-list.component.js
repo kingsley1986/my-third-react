@@ -53,7 +53,7 @@ export default function EventsList() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:9000/events")
+      .get("https://cryptic-shelf-72177.herokuapp.com/events/api")
       .then((response) => {
         setTileData([...response.data]);
       })

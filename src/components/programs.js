@@ -37,7 +37,7 @@ export default function Program() {
   }));
   useEffect(() => {
     axios
-      .get("https://cryptic-shelf-72177.herokuapp.com/programs")
+      .get("https://cryptic-shelf-72177.herokuapp.com/programs/api")
       .then((response) => {
         setProgramData([...response.data]);
       })
@@ -76,7 +76,7 @@ export default function Program() {
                 <GridListTileBar
                   titlePosition="top"
                   title={tile.title}
-                  // style={{ height: 400 }}
+                // style={{ height: 400 }}
                 />
 
                 <Typography
