@@ -353,7 +353,7 @@ export default function Home(props) {
                     </a>
                   </div> */}
                       <div className="card-body">
-                        <h4 className="card-title" style={{ fontSize: "26px" }}>{slide.title}</h4>
+                        <h4 className="card-title" style={{ fontSize: "26px", backgroundColor: "#8B0000	", color: 'white' }}>{slide.title}</h4>
                         <div className="text-center">
                           {" "}
                           <button
@@ -384,7 +384,7 @@ export default function Home(props) {
                             </span>
                           </div>
                         </small>
-                        <p className="card-text text-center">
+                        <p className="card-text text-center" style={{ backgroundColor: "white" }}>
                           {slide.description.substring(0, 95)}
                         </p>
 

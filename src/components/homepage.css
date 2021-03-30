@@ -687,17 +687,18 @@ a {
 } */
 
 /* this is event slider link  */
+
 .btn-grad {
   background-image: linear-gradient(
     to right,
-    #ff0084 0%,
-    #33001b 51%,
-    #ff0084 100%
+    #c04848 0%,
+    #480048 51%,
+    #c04848 100%
   );
 }
 .btn-grad {
   margin: 10px;
-  padding: 9px 5px;
+  padding: 6px 5px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
@@ -709,10 +710,37 @@ a {
 }
 
 .btn-grad:hover {
-  background-position: right center; /* change the direction of the change here */
+  background-position: right center;
   color: #fff;
   text-decoration: none;
 }
+/* 
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #ee0979 0%,
+    #ff6a00 51%,
+    #ee0979 100%
+  );
+}
+.btn-grad {
+  margin: 10px;
+  padding: 5px 7px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; 
+  color: #fff;
+  text-decoration: none;
+} */
 
 /* events slider link ends here  */
 
