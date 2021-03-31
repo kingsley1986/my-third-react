@@ -69,7 +69,7 @@ div.container.forprogramhome {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
-.cardhome:hover {
+ho .cardhome:hover {
   margin-top: -5px;
 }
 .card-body-program-home {
@@ -188,29 +188,7 @@ div.container.forprogramhome {
 .text-center {
   padding-left: 5px !important;
   padding-right: 5px !important;
-  /* width: 60% !important; */
 }
-/* li.MuiGridListTile-root {
-  width: 900px !important;
-  height: 600px !important;
-} */
-
-/* @media screen and (max-width: 992px) {
-  .ant-card-cover img {
-    width: 100% !important;
-  }
-} */
-
-/* On screens that are 600px or less, set the background color to olive */
-/* @media screen and (max-width: 600px) {
-  .ant-card-cover img {
-    width: 100% !important;
-  }
-}
-
-.ant-card-bordered {
-  border: none !important;
-} */
 
 .card-img {
   border-bottom-left-radius: 0px;
@@ -373,12 +351,6 @@ a {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 1px 5px 0 rgba(0, 0, 0, 0.12) !important;
 }
-
-/* *,
-:after,
-:before {
-  box-sizing: inherit;
-} */
 
 :after,
 :before {
@@ -562,9 +534,6 @@ button {
   .comment-container {
     width: 100%;
   }
-  .comments {
-    /* padding: 32px; */
-  }
 }
 
 @media screen and (max-width: 640px) {
@@ -590,16 +559,3 @@ table {
 .nameTag {
   font-weight: "bold";
 }
-
-/* .form-control {
-  width: 80% !important;
-}
-@media screen and (max-width: 640px) {
-  .form-group {
-    margin-left: 35px !important;
-  }
-  .form-control {
-    width: 120% !important;
-    margin-left: -47px;
-  }
-} */
