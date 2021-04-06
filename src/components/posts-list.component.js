@@ -17,9 +17,86 @@ import {
 } from "mdbreact";
 
 export default function Post() {
+  const BlogPost = (props) => (
+    <MDBCol lg="4" md="12" className="mb-lg-0 mb-4"  >
+      <div style={{
+        backgroundColor: "white", boxShadow: '0 0 10px 0.5px grey',
+        display: "block"
+      }}>
+        <MDBView hover className="rounded z-depth-2 mb-4" waves >
+          <img
+            className="img-fluid"
+            style={{
+              width: "500px",
+              height: "270px",
+              objectPosition: "center center",
+              objectFit: "cover",
+            }}
+            src={props.post.postImage}
+            alt=""
+          />
+          <MDBMask overlay="white-slight" />
+        </MDBView>
 
+        <h5 className="font-weight-bold mb-3">
+          <MDBIcon icon="map" className="pr-2" />
+          <strong>{props.post.title}</strong>
+        </h5>
 
+        <h6 className="font-weight-bold mb-3">
+          By{" "}
+          <strong>
+            <a href="#!" className="pink-text">
+              {props.post.from}
+            </a>
+          </strong>
+        </h6>
 
+        <p>
+          <a href="#!" className="font-weight-bold"></a>{" "}
+          {moment(props.post.createdAt).format("llll")}
+        </p>
+        <p
+          className="dark-grey-text"
+          style={{ textAlign: "justify", textJustify: "inter-word" }}
+        >
+          {props.post.description.substring(0, 225)}
+        </p>
+        <MDBBtn color="pink" rounded size="md">
+          <button type="button" class="btn btn-success">
+            <Link
+              style={{ color: "white" }}
+              to={{
+                pathname: `posts/${props.post._id}/comments/api`,
+                query: { id: props.post.id },
+              }}
+            >
+              Read more....
+          </Link>
+          </button>
+          <br></br>
+          <br></br>
+        </MDBBtn>
+      </div>
+    </MDBCol >
+  );
+
+  const [postData, setPostData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://cryptic-shelf-72177.herokuapp.com/posts/api")
+      .then((response) => {
+        setPostData([...response.data]);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, []);
+
+  let blogPostList = postData.map((post, k) => (
+    <BlogPost post={post} key={k} />
+  ));
 
   return (
     <MDBCard className="my-5 pb-5" >
@@ -33,7 +110,7 @@ export default function Post() {
           proident, sunt in culpa qui officia deserunt mollit anim id est
           laborum.
         </p>
-
+        <MDBRow >{blogPostList}</MDBRow>
       </MDBCardBody>
     </MDBCard>
   );
