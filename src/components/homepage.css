@@ -6,10 +6,6 @@
 
 /* home image slider started here  */
 
-.navbar-dark .navbar-nav .nav-link {
-  /* color: #e8491d ;
-    font-size: 18px; font-weight: bolder;  border-left: 2px dotted lightgrey */
-}
 .slide h1 {
   transition: all 0.3s ease;
   -webkit-transform: translateY(-20px);
