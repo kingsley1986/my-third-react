@@ -72,7 +72,7 @@ export default function Post() {
               }}
             >
               Read more....
-          </Link>
+            </Link>
           </button>
           <br></br>
           <br></br>
@@ -85,7 +85,7 @@ export default function Post() {
 
   useEffect(() => {
     axios
-      .get("https://cryptic-shelf-72177.herokuapp.com/posts/api")
+      .get("http://localhost:9000/posts/api")
       .then((response) => {
         setPostData([...response.data]);
       })

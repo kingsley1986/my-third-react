@@ -37,7 +37,7 @@ export default function Program() {
   }));
   useEffect(() => {
     axios
-      .get("https://cryptic-shelf-72177.herokuapp.com/programs/api")
+      .get("http://localhost:9000/programs/api")
       .then((response) => {
         setProgramData([...response.data]);
       })

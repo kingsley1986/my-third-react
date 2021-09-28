@@ -37,7 +37,7 @@ export default function ContactForm(props) {
       setRequest("");
 
       axios
-        .post("https://cryptic-shelf-72177.herokuapp.com/contact_form", {
+        .post("http://localhost:9000/contact_form", {
           name: name,
           email: email,
           request: request,

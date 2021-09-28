@@ -122,7 +122,7 @@ export default function ProgramComments(props) {
 
     axios
       .delete(
-        "https://cryptic-shelf-72177.herokuapp.com/programs/" + props.match.params.id + "/delete"
+        "http://localhost:9000/programs/" + props.match.params.id + "/delete"
       )
 
       .then(function (response) {
@@ -139,7 +139,7 @@ export default function ProgramComments(props) {
   useEffect(() => {
     axios
       .get(
-        "https://cryptic-shelf-72177.herokuapp.com/programs/" +
+        "http://localhost:9000/programs/" +
         props.match.params.id +
         "/programcommentsapi"
       )
@@ -155,7 +155,7 @@ export default function ProgramComments(props) {
   const onPageLoad = () => {
     axios
       .get(
-        "https://cryptic-shelf-72177.herokuapp.com/programs/" +
+        "http://localhost:9000/programs/" +
         props.match.params.id +
         "/programcommentsapi"
       )
@@ -195,7 +195,7 @@ export default function ProgramComments(props) {
 
       axios
         .post(
-          "https://cryptic-shelf-72177.herokuapp.com/programs/" +
+          "http://localhost:9000/programs/" +
           props.match.params.id +
           "/createcommentapi",
           { name: name, description: eventDescription, token }

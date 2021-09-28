@@ -71,6 +71,7 @@ const useStyles = makeStyles((theme) => ({
   media: {
     height: 0,
     paddingTop: "56.25%", // 16:9
+
   },
   expand: {
     transform: "rotate(0deg)",
@@ -135,7 +136,7 @@ export default function Home(props) {
 
   useEffect(() => {
     axios
-      .get("https://cryptic-shelf-72177.herokuapp.com/programs/api")
+      .get("http://localhost:9000/programs/api")
       .then((response) => {
         setProgramData([...response.data]);
       })
@@ -146,7 +147,7 @@ export default function Home(props) {
 
   useEffect(() => {
     axios
-      .get("https://cryptic-shelf-72177.herokuapp.com/events/api")
+      .get("http://localhost:9000/events/upcoming/api")
       .then((response) => {
         setSlides([...response.data]);
         console.log(response.data);
@@ -157,7 +158,7 @@ export default function Home(props) {
   }, []);
   useEffect(() => {
     axios
-      .get("https://cryptic-shelf-72177.herokuapp.com/events/lives")
+      .get("http://localhost:9000/events/lives")
       .then((response) => {
         setLiveEvent([...response.data]);
         console.log(response.data);
@@ -282,7 +283,7 @@ export default function Home(props) {
 
   return (
     <div>
-      <Slider className="slider-wrapper" autoplay={3000} infinite="true">
+      <Slider className="slider-wrapper" autoplay={9000} infinite="true">
         {content.map((item, index) => (
           <div
             key={index}
@@ -353,12 +354,13 @@ export default function Home(props) {
                     </a>
                   </div> */}
                       <div className="card-body">
-                        <h4 className="card-title" style={{ fontSize: "26px", backgroundColor: "#8B0000	", color: 'white' }}>{slide.title}</h4>
-                        <div className="text-center">
+                        <h4 className="card-title" style={{ fontSize: "15px", backgroundColor: "#8B0000	", color: 'white' }}>{slide.title}</h4>
+                        <div className="text-center" >
                           {" "}
                           <button
                             type="button"
                             class="btn btn-md btn-outline-success py-0"
+                            style={{ fontSize: "10px" }}
                           >
                             {goingPeople(slide.going, slide.coming_with)}
                           </button>
@@ -367,11 +369,12 @@ export default function Home(props) {
                         <small
                           className="text-muted cat"
                           className="text-center"
+
                         >
-                          <div className="text-center">
+                          <div className="text-center" style={{ marginTop: "-15px" }}>
                             <i className="far fa-clock text-info" />{" "}
                             <strong>Starting</strong>
-                            <span class="startingclass">
+                            <span class="startingclass" >
                               {" "}
                               {moment(slide.startingDate).format("LLLL")}
                             </span>
@@ -379,13 +382,13 @@ export default function Home(props) {
                           {/* <i className="fas fa-users text-info" />{" "} */}
                           <div className="views">
                             <strong>Closing</strong>{" "}
-                            <span class="ingredient endingclass">
+                            <span class="ingredient endingclass" >
                               {moment(slide.closingDate).format("LLLL")}
                             </span>
                           </div>
                         </small>
-                        <p className="card-text text-center" style={{ backgroundColor: "white" }}>
-                          {slide.description.substring(0, 95)}
+                        <p className="card-text text-center" idName="hello" style={{ backgroundColor: "white", marginTop: "-22px" }}>
+                          {slide.description.substring(0, 120)}
                         </p>
 
                         <a

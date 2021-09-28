@@ -479,6 +479,15 @@ button:hover {
   }
 }
 
+/* @media (min-height: 500px) {
+  .col-12,
+  .col-lg-12,
+  .col-lg-12,
+  .col-lg-12 {
+    margin-left: 12px;
+  }
+} */
+
 @media (max-width: 640px) {
   .slider-wrapper,
   .slide {
@@ -610,8 +619,14 @@ a {
 /* body {
   padding: 2rem 0rem;
 } */
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  height: 22.8rem;
+}
 .card {
-  margin-top: 20px;
+  /* margin-top: 6px; */
+
   padding-top: 4px;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAL0lEQVQYV2NkIBIwEqHOGKjmLDEKwWbhUwg2CWYjRSaimESRiVhNIstEvCbBTAQAl5IFCylWpesAAAAASUVORK5CYII=);
 
@@ -639,7 +654,7 @@ a {
 .endingclass {
   -webkit-animation: background 5s cubic-bezier(1, 0, 0, 1) infinite;
   animation: background 5s cubic-bezier(1, 0, 0, 1) infinite;
-  font-size: 13.5px;
+  font-size: 9px;
   font-weight: bold;
   border: solid LightGrey 2px;
 }
@@ -683,7 +698,9 @@ a {
 } */
 
 /* this is event slider link  */
-
+.text-center {
+  font-size: 10px;
+}
 .btn-grad {
   background-image: linear-gradient(
     to right,
@@ -694,7 +711,7 @@ a {
 }
 .btn-grad {
   margin: 10px;
-  padding: 6px 5px;
+  padding: 1px 2px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
@@ -703,6 +720,7 @@ a {
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
   display: block;
+  font-size: 0.7rem;
 }
 
 .btn-grad:hover {
