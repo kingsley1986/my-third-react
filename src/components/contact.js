@@ -142,7 +142,7 @@ export default function Contact() {
                                 type="text"
                                 id="txt_phone"
                                 name="email"
-                                placeholder="Your email"
+                                placeholder="Your phone"
                                 value={phone}
                                 onChange={handleChange("phone")}
                             />
@@ -152,7 +152,7 @@ export default function Contact() {
                                 type="text"
                                 id="txt_subject"
                                 name="email"
-                                placeholder="Your email"
+                                placeholder="Your subject"
                                 value={subject}
                                 onChange={handleChange("subject")}
                             />
@@ -162,7 +162,7 @@ export default function Contact() {
                                 type="textarea"
                                 id="txt_subject"
                                 name="email"
-                                placeholder="Your email"
+                                placeholder="Your Message"
                                 rows={4}
                                 cols={20}
                                 value={message}
