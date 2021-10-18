@@ -37,12 +37,13 @@ const NavBar = () => {
               color: "#e8491d",
               fontWeight: "bold", fontSize: "18px", fontWeight: "bolder",
             }} href="/events">Events</ReactBootStrap.Nav.Link>
-            <ReactBootStrap.Nav.Link style={{ color: "white", fontSize: "18px", fontWeight: "bolder", }} href="/posts">Blogs</ReactBootStrap.Nav.Link>
+            <ReactBootStrap.Nav.Link style={{ color: "white", fontSize: "18px", fontWeight: "bolder", }} href="#">Blogs</ReactBootStrap.Nav.Link>
             <ReactBootStrap.Nav.Link style={{
               color: "#e8491d",
               fontWeight: "bold", fontSize: "18px", fontWeight: "bolder",
             }} href="/galleries">Gallleries</ReactBootStrap.Nav.Link>
-            <ReactBootStrap.Nav.Link style={{ color: "white", fontSize: "18px", fontWeight: "bolder", }} href="#features">Contacts</ReactBootStrap.Nav.Link>
+
+            <ReactBootStrap.Nav.Link style={{ color: "white", fontSize: "18px", fontWeight: "bolder", }} href="/contacts">Contacts</ReactBootStrap.Nav.Link>
 
           </ReactBootStrap.Nav>
           <ReactBootStrap.Nav>
@@ -50,13 +51,13 @@ const NavBar = () => {
               <ReactBootStrap.Nav.Link style={{
                 color: "#e8491d",
                 fontWeight: "bold", fontSize: "18px", fontWeight: "bolder", borderLeft: "2px dotted lightgrey",
-              }} href="#deets">Contacts</ReactBootStrap.Nav.Link>
+              }} href="/contacts">Contacts</ReactBootStrap.Nav.Link>
 
             </Link>
             <Link to="/dankmemes">
               <ReactBootStrap.Nav.Link style={{ color: "white", fontSize: "18px", fontWeight: "bolder", borderLeft: "2px dotted lightgrey", }} eventKey={2} href="#memes">
                 Info Contacts
-      </ReactBootStrap.Nav.Link>
+              </ReactBootStrap.Nav.Link>
             </Link>
           </ReactBootStrap.Nav>
         </ReactBootStrap.Navbar.Collapse>

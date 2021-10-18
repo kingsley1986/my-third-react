@@ -32,6 +32,7 @@ import AddComingWithModal from "./components/coming-with-modal.component";
 
 import Header from "./components/Header";
 import Home from "./components/home";
+import Contact from "./components/contact";
 import Footer from "./components/footer";
 
 export default function App(props) {
@@ -79,8 +80,11 @@ export default function App(props) {
           />
         </Route>
 
-        <Route path="/posts" exact component={PostsList}>
+        <Route path="/posts/" exact component={PostsList}>
           <Route path="/posts" exact component={PostsList} />
+        </Route>
+        <Route path="/contacts/" exact component={Contact}>
+          <Route path="/contacts" exact component={Contact} />
         </Route>
 
         <Route path="/posts/:id/comments/api" exact component={PostAndComments}>

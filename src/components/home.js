@@ -354,13 +354,13 @@ export default function Home(props) {
                     </a>
                   </div> */}
                       <div className="card-body">
-                        <h4 className="card-title" style={{ fontSize: "15px", backgroundColor: "#8B0000	", color: 'white' }}>{slide.title}</h4>
+                        <h4 className="card-title" style={{ fontSize: "24px", backgroundColor: "#8B0000	", color: 'white' }}>{slide.title}</h4>
                         <div className="text-center" >
                           {" "}
                           <button
                             type="button"
                             class="btn btn-md btn-outline-success py-0"
-                            style={{ fontSize: "10px" }}
+                            style={{ fontSize: "15px" }}
                           >
                             {goingPeople(slide.going, slide.coming_with)}
                           </button>
@@ -369,9 +369,10 @@ export default function Home(props) {
                         <small
                           className="text-muted cat"
                           className="text-center"
+                        // style={{ boxShadow: "10px 10px 9px 10px rgb(0 0 0 / 2)" }}
 
                         >
-                          <div className="text-center" style={{ marginTop: "-15px" }}>
+                          <div className="text-center" style={{ marginTop: "-15px", backgroundColor: "white", boxShadow: "0 6px 10px rgb(0 0 0 / 0.4)" }}>
                             <i className="far fa-clock text-info" />{" "}
                             <strong>Starting</strong>
                             <span class="startingclass" >
@@ -380,14 +381,14 @@ export default function Home(props) {
                             </span>
                           </div>
                           {/* <i className="fas fa-users text-info" />{" "} */}
-                          <div className="views">
+                          <div className="views" style={{ backgroundColor: "white", boxShadow: "0 6px 10px rgb(0 0 0 / 0.4)", marginTop: 6 }}>
                             <strong>Closing</strong>{" "}
                             <span class="ingredient endingclass" >
                               {moment(slide.closingDate).format("LLLL")}
                             </span>
                           </div>
                         </small>
-                        <p className="card-text text-center" idName="hello" style={{ backgroundColor: "white", marginTop: "-22px" }}>
+                        <p className="card-text text-center" idName="hello" style={{ backgroundColor: "white", marginTop: "-14px", }}>
                           {slide.description.substring(0, 120)}
                         </p>
 
@@ -417,8 +418,8 @@ export default function Home(props) {
               </div>
             );
           })}
-        </Slider2>
-      </div>
+        </Slider2 >
+      </div >
       <br></br>
       <br></br>
       <div className="container">
@@ -511,6 +512,6 @@ export default function Home(props) {
         // onSubmit={saveForm}
         />
       </div>
-    </div>
+    </div >
   );
 }

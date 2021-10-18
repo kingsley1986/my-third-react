@@ -88,6 +88,7 @@ export default function Post() {
       .get("http://localhost:9000/posts/api")
       .then((response) => {
         setPostData([...response.data]);
+
       })
       .catch(function (error) {
         console.log(error);
